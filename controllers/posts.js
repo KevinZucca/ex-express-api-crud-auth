@@ -1,5 +1,6 @@
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
+const jsonwebtoken = require("jsonwebtoken");
 const { kebabCase } = require("lodash");
 
 // get all posts or filtered
