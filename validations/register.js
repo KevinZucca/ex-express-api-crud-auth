@@ -8,22 +8,22 @@ module.exports = {
       options: {
         ignore_whitespace: true,
       },
-      errorMessage: "Lo username è obbligatorio",
+      errorMessage: "You must enter the username",
     },
     isLength: {
       options: {
         min: 2,
       },
-      errorMessage: "Lo username deve avere almeno 2 caratteri",
+      errorMessage: "Username must have at least 2 characters",
     },
   },
   email: {
     in: ["body"],
     isEmail: {
-      errorMessage: "L'email non è valida",
+      errorMessage: "Email not valid",
     },
     notEmpty: {
-      errorMessage: "Bisogna inserire l'email",
+      errorMessage: "You must enter the email address",
     },
   },
   custom: {
@@ -34,7 +34,7 @@ module.exports = {
         },
       });
       if (alreadyExists) {
-        return Promise.reject("L'email inserita è già in uso");
+        return Promise.reject("Email entered already used!");
       }
 
       return true;
@@ -52,9 +52,9 @@ module.exports = {
       },
     },
     errorMessage:
-      "La password deve essere lunga almeno 8 caratteri, contenere almeno una lettera maiuscola, una minuscola, un numero e un carattere speciale",
+      "The password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.",
     notEmpty: {
-      errorMessage: "Bisogna inserire una password",
+      errorMessage: "You must enter a password.",
     },
   },
 };

@@ -8,21 +8,21 @@ module.exports = {
       options: {
         ignore_whitespace: true,
       },
-      errorMessage: "Inserire lo username",
+      errorMessage: "You must enter the username",
     },
   },
   email: {
     in: ["body"],
     isEmail: {
-      errorMessage: "L'email non è valida",
+      errorMessage: "Email not valid",
     },
     notEmpty: {
-      errorMessage: "Inserire l'email",
+      errorMessage: "Enter the email",
     },
   },
   password: {
     notEmpty: {
-      errorMessage: "Bisogna inserire la password",
+      errorMessage: "You must enter the password",
     },
   },
 };
