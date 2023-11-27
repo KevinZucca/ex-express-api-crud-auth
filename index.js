@@ -8,9 +8,13 @@ const tagsRouter = require("./routers/tags");
 const errorHandler = require("./middlewares/errorHandler");
 const notFoundRoute = require("./middlewares/notFoundRoute");
 const authRouter = require("./routers/auth");
+const cors = require("cors");
 
 // body parser config
 app.use(express.json());
+
+// cors
+app.use(cors());
 
 // routes
 app.use("/posts", postsRouter);
