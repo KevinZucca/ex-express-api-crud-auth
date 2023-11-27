@@ -7,6 +7,7 @@ const categoriesRouter = require("./routers/categories");
 const tagsRouter = require("./routers/tags");
 const errorHandler = require("./middlewares/errorHandler");
 const notFoundRoute = require("./middlewares/notFoundRoute");
+const authRouter = require("./routers/auth");
 
 // body parser config
 app.use(express.json());
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use("/posts", postsRouter);
 app.use("/categories", categoriesRouter);
 app.use("/tags", tagsRouter);
+app.use("", authRouter);
 
 // middlewares
 app.use(notFoundRoute);
