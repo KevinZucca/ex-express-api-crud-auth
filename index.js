@@ -8,6 +8,7 @@ const tagsRouter = require("./routers/tags");
 const errorHandler = require("./middlewares/errorHandler");
 const notFoundRoute = require("./middlewares/notFoundRoute");
 const authRouter = require("./routers/auth");
+const usersRouter = require("./routers/users");
 const cors = require("cors");
 
 // body parser config
@@ -20,6 +21,7 @@ app.use(cors());
 app.use("/posts", postsRouter);
 app.use("/categories", categoriesRouter);
 app.use("/tags", tagsRouter);
+app.use("/users", usersRouter);
 app.use("", authRouter);
 
 // middlewares

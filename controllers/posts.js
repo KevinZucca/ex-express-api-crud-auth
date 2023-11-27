@@ -26,6 +26,7 @@ exports.index = async (req, res) => {
     include: {
       category: true,
       tags: true,
+      user: true,
     },
   });
   return res.json(data);

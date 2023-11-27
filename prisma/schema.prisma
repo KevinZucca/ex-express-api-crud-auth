@@ -20,6 +20,8 @@ model Post {
   category Category? @relation(fields: [categoryId], references: [id])
   categoryId Int?
   tags Tag[]
+  userId Int?
+  user User? @relation(fields: [userId], references: [id])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -49,6 +51,7 @@ model User {
   role String @default("user")
   email String @unique
   password String 
+  posts Post[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
